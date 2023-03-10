@@ -1,45 +1,150 @@
 <template>
+  <div>
     <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg p-4">
-    <span class="text-muted">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/About">About</router-link> |
-    <router-link to="/ResumeView">Resume</router-link> |
-    <router-link to="/ProjectView">Projects</router-link> |
-    <router-link to="/Testimonial">Testimonial</router-link> |
-    <router-link to="/Contact">Contact</router-link> 
-    </span>
-  </div>
-</div>
-<nav class="navbar navbar-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
-<div class="di"></div>
+      <div class="bg-dark p-4">
+        <h5 class="text-white h4">Collapsed content</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
 
+    <nav class="navbar navbar-light fixed-top">
+      <div class="container-fluid">
+        <img
+          src="https://i.postimg.cc/26C74zH7/lagom-high-resolution-logo-black-on-transparent-background.png"
+          class="lagom"
+          alt=""
+          srcset=""
+        />
+        <div class="tog">
+          <button
+            class="navbar-toggler navbar-toggler-dark"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div
+          class="offcanvas off offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <img
+              src="https://i.postimg.cc/rswxMq2P/lagom-low-resolution-logo-black-on-transparent-background.png"
+              class="lagom"
+              alt=""
+              srcset=""
+            />
+            <button
+              type="button"
+              class="btn-close btn-close-white text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><router-link to="/"></router-link>Home<i
+                    class="fa fa-home"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+                <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-links" to="/about" >About</router-link>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Edit <i class="fa fa-pencil-square" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Add Account
+                  <i class="fa fa-plus-square" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >History <i class="fa fa-history" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Buy <i class="fa fa-pencil-square" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Credit <i class="fa fa-credit-card" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Contact <i class="fa fa-compress" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Help <i class="fa fa-info-circle" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'NavBar'
-}
+  name: "NavBar",
+};
 </script>
 
-<style>
-.collapse{
-  position: relative;
-  z-index: 2;
-}
-.text-muted a:hover{
-  color: white;
-  text-shadow: 0 0 5px, 0 0 25px, 0 0 50px;
+<style scoped>
+
+.lagom {
+  height: 2rem;
+  padding-left: 3rem;
 }
 
-.navbar{
-  z-index: 2;
-  position: relative;
+.navbar-toggler {
+    border: none;
+    /* border: 2px solid black; */
+  /* background-color: black; */
 }
+.tog{
+    padding-right: 3rem;
+}
+
+.off {
+  background: rgba(58, 58, 58, 0.349);
+  color: white;
+}
+
+.nav-link{
+  color:white;
+}
+
+
 </style>
