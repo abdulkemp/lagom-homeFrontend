@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div class="line"></div>
         <div class="prod container">
             <div class="row">
                 <div class="col-md-4 mt-5" v-for="item in items" :key="item.id">
@@ -53,6 +54,13 @@ export default {
     /* height: 10rem; */
 }
 
+.line{
+    border:1px solid black;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
 
 .col {
     justify-content: center;
