@@ -56,6 +56,9 @@
               <li class="nav-item">
                 <router-link class="nav-links" to="/about" >About</router-link>
               </li>
+              <li class="nav-item">
+                <router-link class="nav-links" to="/login" >Login/Register</router-link>
+              </li>
             </ul>
             <form class="d-flex">
               <input

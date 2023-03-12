@@ -18,13 +18,17 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
   
 <script>
 import axios from "axios";
+import Footer from "../components/Footer.vue"
 export default {
+    
     name: "products",
+    
     data() {
         return {
             items: this.$store.state.products,
@@ -43,6 +47,7 @@ export default {
         },
     },
 };
+
 </script>
   
 <style>
