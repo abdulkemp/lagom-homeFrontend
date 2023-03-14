@@ -26,15 +26,18 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import NavBar from "../components/NavBar.vue";
+
 export default {
   name: 'About',
-  components: {NavBar}
+  components: {NavBar,Footer}
 }
+
 </script>
 
 <style>

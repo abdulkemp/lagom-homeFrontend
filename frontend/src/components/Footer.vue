@@ -1,7 +1,5 @@
 <template>
     <div>
-        <v-container>
-        <v-footer>
             <div class="footer">
                 <div class="linkings">
                     <ul class="links">
@@ -47,8 +45,6 @@
                     </div>
                 </div>
             </div>
-        </v-footer>
-        </v-container>
     </div>
 </template>
 
@@ -65,35 +61,30 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    border-top: 2px solid black;
+    margin-top: 3rem;
 }
-
 .footer .linkings .links {
     width: 15rem;
     height: auto;
     max-width: 100%;
 }
-
 .lower .cop .cpoy {
     width: 15rem;
     height: auto;
     max-width: 100%;
 }
-
 .links2 {
     width: 15rem;
 }
-
 .links2 .d-flex {
     max-width: 100%;
     width: 15rem;
     /* padding: 0 10px; */
 }
-
 .d-flex {
     margin-bottom: 1rem;
 }
-
 .cop {
     /* float: right; */
     display: flex;
@@ -104,13 +95,11 @@ export default {
     max-width: 95%;
     margin: 0 auto;
 }
-
 .copy {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: grey;
 }
-
 .linkings {
     display: flex;
     justify-content: space-around;
@@ -119,14 +108,11 @@ export default {
     width: 1280px;
     max-width: 95%;
     margin: 0 auto;
-    margin-top: 3rem;
 }
-
 .lower {
     background-color: black;
     /* margin-top: 2rem; */
 }
-
 .socials {
     color: white;
     font-size: 25px;
