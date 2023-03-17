@@ -23,6 +23,34 @@ export default createStore({
       }
     }
   },
+  async login(context, payload){
+    console.log(payload);
+    fetch(`https://lagom-project.onrender.com/login`, {
+    // fetch(`http://localhost:3306/login`, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {"Content-type": "application/json; charset=UTF-8"},
+      body: JSON.stringify(payload)
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      // console.log(err);
+    })
+  },
+  async register(context, payload){
+    console.log(payload);
+    fetch(`https://lagom-project.onrender.com/register`, {
+      method: 'POST',
+      headers: {"Content-type": "application/json; charset=UTF-8"},
+      body: JSON.stringify(payload)
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      // console.log(err);
+    })
+  },
   modules: {
   }
 })
